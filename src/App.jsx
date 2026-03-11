@@ -31,7 +31,7 @@ export default function App() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 sm:mb-8 gap-4 sm:gap-6">
           <div className="max-w-2xl px-2 sm:px-0">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white md:text-4xl text-balance">
-              SIP & Step-Up SIP Calculator – Estimate Investment Growth
+              Investment Planner
             </h1>
             <p className="mt-2 text-base sm:text-lg text-slate-600 dark:text-slate-400 text-balance">
               Plan your future wealth creation journey with our advanced calculators. Let compound interest work for you.
