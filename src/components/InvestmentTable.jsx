@@ -2,11 +2,11 @@ export default function InvestmentTable({ yearlyData }) {
   const formatCurrency = (val) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(val);
   
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden mt-6">
-      <div className="p-6 border-b border-slate-100 dark:border-slate-700">
+    <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm overflow-hidden mt-6 w-full max-w-full">
+      <div className="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-700">
         <h3 className="font-semibold text-slate-800 dark:text-slate-200 text-lg">Yearly Breakdown</h3>
       </div>
-      <div className="overflow-x-auto max-h-[600px] overflow-y-auto">
+      <div className="overflow-x-auto w-full max-h-[600px] overflow-y-auto">
         <table className="w-full text-left text-sm relative">
           <thead className="bg-slate-50/90 dark:bg-slate-900/90 text-slate-500 dark:text-slate-400 sticky top-0 backdrop-blur z-10 shadow-sm">
             <tr>

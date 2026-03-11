@@ -25,15 +25,15 @@ export default function App() {
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans pb-12 selection:bg-blue-200 dark:selection:bg-blue-900">
       <Navbar />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <main className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pt-4 sm:pt-8 w-full overflow-hidden">
         
         {/* Header & Tabs */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-6">
-          <div className="max-w-2xl">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl text-balance">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 sm:mb-8 gap-4 sm:gap-6">
+          <div className="max-w-2xl px-2 sm:px-0">
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white md:text-4xl text-balance">
               Investment Planner
             </h1>
-            <p className="mt-2 text-lg text-slate-600 dark:text-slate-400 text-balance">
+            <p className="mt-2 text-base sm:text-lg text-slate-600 dark:text-slate-400 text-balance">
               Plan your future wealth creation journey with our advanced calculators. Let compound interest work for you.
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-6 sm:gap-8 items-start w-full">
           
           {/* Left Column: Form */}
           <div className="xl:col-span-4 sticky top-24">
@@ -70,10 +70,10 @@ export default function App() {
           </div>
           
           {/* Right Column: Results */}
-          <div className="xl:col-span-8 space-y-8 min-h-[400px]">
+          <div className="xl:col-span-8 space-y-6 sm:space-y-8 min-h-[400px] w-full max-w-full overflow-hidden">
             {results ? (
-              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-8">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6 sm:space-y-8">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 px-2 sm:px-0">
                   <ResultsCard title="Total Invested Amount" amount={results.totalInvested} />
                   <ResultsCard title="Est. Returns" amount={results.estimatedReturns} />
                   <ResultsCard title="Total Value" amount={results.finalValue} highlight={true} />

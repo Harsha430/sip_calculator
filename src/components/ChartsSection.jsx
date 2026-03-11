@@ -62,9 +62,9 @@ export default function ChartsSection({ totalInvested, estimatedReturns, yearlyD
                 </Pie>
                 <Tooltip 
                   formatter={(value) => new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(value)}
-                  contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', backgroundColor: 'var(--tw-colors-white, #fff)' }}
+                  contentStyle={{ borderRadius: '12px', border: '1px solid #e2e8f0', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)', backgroundColor: 'var(--tw-colors-white, #fff)', fontSize: '13px' }}
                 />
-                <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
+                <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '12px' }} />
               </PieChart>
             </ResponsiveContainer>
           </div>
@@ -75,12 +75,12 @@ export default function ChartsSection({ totalInvested, estimatedReturns, yearlyD
           <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-6 text-lg">Portfolio Growth Over Time</h3>
           <div className="w-full flex-1" style={{ minHeight: '300px' }}>
             <ResponsiveContainer width="100%" height="100%" minHeight={300}>
-              <LineChart data={yearlyData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+              <LineChart data={yearlyData} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-200 dark:stroke-slate-700/50" />
-                <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={10} className="text-xs fill-slate-500 dark:fill-slate-400" />
-                <YAxis tickFormatter={formatYAxis} tickLine={false} axisLine={false} tickMargin={10} className="text-xs fill-slate-500 dark:fill-slate-400" width={60} />
+                <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={10} style={{ fontSize: '10px' }} className="fill-slate-500 dark:fill-slate-400" />
+                <YAxis tickFormatter={formatYAxis} tickLine={false} axisLine={false} tickMargin={8} width={45} style={{ fontSize: '10px' }} className="fill-slate-500 dark:fill-slate-400" />
                 <Tooltip content={<CustomTooltip />} />
-                <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px' }} />
+                <Legend iconType="circle" wrapperStyle={{ paddingTop: '20px', fontSize: '12px' }} />
                 <Line type="monotone" name="Total Value" dataKey="value" stroke="#3b82f6" strokeWidth={3} dot={false} activeDot={{ r: 6, strokeWidth: 0 }} />
                 <Line type="monotone" name="Invested Amount" dataKey="invested" stroke="#94a3b8" strokeWidth={3} dot={false} activeDot={{ r: 6, strokeWidth: 0 }} />
               </LineChart>
