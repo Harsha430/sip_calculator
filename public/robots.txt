@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sip-calculator-app.vercel.app/sitemap.xml
+Sitemap: https://sip-stepup-calculator-app.vercel.app/sitemap.xml
