@@ -44,8 +44,8 @@ export default function ChartsSection({ totalInvested, estimatedReturns, yearlyD
         {/* Pie Chart */}
         <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col items-center justify-center min-h-[400px]">
           <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-6 text-lg w-full text-left">Investment vs Returns</h3>
-          <div className="w-full flex-1 min-h-[300px]" style={{ minHeight: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%" minHeight={300}>
+          <div className="w-full h-full min-h-[300px]">
+            <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
                   data={pieData}
@@ -73,8 +73,8 @@ export default function ChartsSection({ totalInvested, estimatedReturns, yearlyD
         {/* Line Chart */}
         <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col min-h-[400px]">
           <h3 className="font-semibold text-slate-800 dark:text-slate-200 mb-6 text-lg">Portfolio Growth Over Time</h3>
-          <div className="w-full flex-1" style={{ minHeight: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%" minHeight={300}>
+          <div className="w-full h-full min-h-[300px]">
+            <ResponsiveContainer width="100%" height={300}>
               <LineChart data={yearlyData} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" vertical={false} className="stroke-slate-200 dark:stroke-slate-700/50" />
                 <XAxis dataKey="year" tickLine={false} axisLine={false} tickMargin={10} style={{ fontSize: '10px' }} className="fill-slate-500 dark:fill-slate-400" />
